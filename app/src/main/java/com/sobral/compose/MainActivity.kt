@@ -128,7 +128,7 @@ fun ProductItem(description: String = "") {
                 Text(
                     text = "R$ 14,99",
                     fontSize = 14.sp,
-                    fontWeight = FontWeight(400),
+                    fontWeight = FontWeight(401),
                     modifier = Modifier.padding(top = 8.dp)
                 )
             }
