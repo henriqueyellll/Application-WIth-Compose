@@ -10,15 +10,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.sobral.compose.R
-import com.sobral.model.Product
-import java.math.BigDecimal
+import com.sobral.compose.model.Category
+import com.sobral.compose.sampledata.sampleProducts
 
 @Composable
-fun ProductsSection() {
+fun ProductsSection(category: Category) {
     Column {
         Text(
-            text = "Promoções",
+            text = category.title,
             Modifier.padding(start = 16.dp),
             fontSize = 20.sp,
             fontWeight = FontWeight(400)
@@ -32,27 +31,11 @@ fun ProductsSection() {
             horizontalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Spacer(Modifier)
-            ProductItem(
-                Product(
-                    name = "Hamburguer",
-                    price = BigDecimal("12.99"),
-                    image = R.drawable.hamburguer
-                )
-            )
-            ProductItem(
-                Product(
-                    name = "Batata Frita",
-                    price = BigDecimal("19.99"),
-                    image = R.drawable.fries
-                )
-            )
-            ProductItem(
-                Product(
-                    name = "Combo Sushis",
-                    price = BigDecimal("7.99"),
-                    image = R.drawable.sushi
-                )
-            )
+
+            category.products.forEach {
+                ProductItem(it)
+            }
+
             Spacer(Modifier)
         }
     }
@@ -61,5 +44,10 @@ fun ProductsSection() {
 @Preview(showBackground = true)
 @Composable
 private fun ProductsSectionPreview() {
-    ProductsSection()
+    ProductsSection(
+        Category(
+            title = "Promoções",
+            products = sampleProducts
+        )
+    )
 }

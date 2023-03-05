@@ -24,10 +24,10 @@ import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sobral.compose.R
-import com.sobral.compose.colors.Purple500
-import com.sobral.compose.colors.Teal200
-import com.sobral.extensions.toBrazilianCurrency
-import com.sobral.model.Product
+import com.sobral.compose.ui.colors.Purple500
+import com.sobral.compose.ui.colors.Teal200
+import com.sobral.compose.extensions.toBrazilianCurrency
+import com.sobral.compose.model.Product
 import java.math.BigDecimal
 
 @Composable

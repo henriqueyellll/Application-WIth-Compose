@@ -1,4 +1,4 @@
-package com.sobral.compose.colors
+package com.sobral.compose.ui.colors
 
 import androidx.compose.ui.graphics.Color
 

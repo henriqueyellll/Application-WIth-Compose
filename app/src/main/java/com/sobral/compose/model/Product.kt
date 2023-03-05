@@ -1,4 +1,4 @@
-package com.sobral.model
+package com.sobral.compose.model
 
 import androidx.annotation.DrawableRes
 import java.math.BigDecimal

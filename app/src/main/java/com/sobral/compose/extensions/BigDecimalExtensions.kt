@@ -1,4 +1,4 @@
-package com.sobral.extensions
+package com.sobral.compose.extensions
 
 import java.math.BigDecimal
 import java.text.NumberFormat
